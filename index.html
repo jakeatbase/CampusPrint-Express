@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusPrint Express</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="printer" viewBox="0 0 24 24"><path fill="currentColor" d="M7 3h10v4H7zM5 8h14a3 3 0 0 1 3 3v6h-4v4H6v-4H2v-6a3 3 0 0 1 3-3zm3 7v4h8v-4zm10-4.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ </defs>
+</svg>
+
+<header class="top">
+ <a class="logo" href="#top" data-target="top"><img src="images/logo.png" alt="CampusPrint Express"></a>
+ <nav aria-label="Main">
+  <a href="#top" class="nav-link active" data-target="top">Home</a>
+  <a href="#services" class="nav-link" data-target="services">Services</a>
+  <a href="#services" class="nav-link" data-target="services">How It Works</a>
+  <a href="#top" class="nav-link" data-target="top">About Us</a>
+  <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+ </nav>
+ <button class="btn solid order-btn"><svg class="ic"><use href="#printer"/></svg>Order Prints</button>
+</header>
+
+<main id="top">
+ <section class="hero">
+  <img class="hero-photo" src="images/hero.jpg" alt="Printed research papers, project report, notebooks and dragon mascot on a desk">
+  <div class="hero-text">
+   <p class="eyebrow">CAMPUSPRINT EXPRESS <i></i></p>
+   <h1>Your Campus Printing,<br><span>Made Easy.</span></h1>
+   <p class="sub">Fast, affordable, and reliable printing for assignments, projects, reviewers, and more.</p>
+   <div class="btns">
+    <button class="btn solid order-btn"><svg class="ic"><use href="#printer"/></svg>Order Prints</button>
+    <button id="explore-btn" class="btn line">Explore Services <svg class="ic sm"><use href="#arrow"/></svg></button>
+   </div>
+  </div>
+ </section>
+
+ <section class="benefits" aria-label="Benefits">
+  <div><svg class="bi" viewBox="0 0 48 48"><path d="M24 8 3 18l21 10 21-10zM11 25v8c0 3 6 6 13 6s13-3 13-6v-8" fill="none" stroke="#0878F9" stroke-width="3" stroke-linejoin="round"/></svg>Student-Friendly Prices</div>
+  <div><svg class="bi" viewBox="0 0 48 48"><circle cx="24" cy="28" r="15" fill="none" stroke="#0878F9" stroke-width="3"/><path d="M24 28V18M19 6h10M24 6v7M24 28l7 5" fill="none" stroke="#0878F9" stroke-width="3" stroke-linecap="round"/></svg>Quick Turnaround</div>
+  <div><svg class="bi" viewBox="0 0 48 48"><path d="M24 4 8 10v13c0 10 7 17 16 21 9-4 16-11 16-21V10z" fill="none" stroke="#0878F9" stroke-width="3" stroke-linejoin="round"/><path d="m16 24 6 6 11-12" fill="none" stroke="#0878F9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Quality Prints</div>
+  <div><svg class="bi" viewBox="0 0 48 48"><path d="M3 6h7l6 25h22l5-18H12" fill="none" stroke="#0878F9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="40" r="3" fill="#0878F9"/><circle cx="35" cy="40" r="3" fill="#0878F9"/></svg>Easy Ordering</div>
+ </section>
+
+ <section id="services" class="services">
+  <p class="label"><i></i>OUR SERVICES<i></i></p>
+  <h2>Printing Services for Every Student</h2>
+  <div class="cards">
+   <article class="card"><img src="images/bw.jpg" alt="Black and white printed pages"><div><h3>Black &amp; White Printing</h3><p>Crisp, clear, and affordable prints for your everyday needs.</p></div><button class="arrow" data-service="bw" aria-label="Order Black and White Printing"><svg><use href="#arrow"/></svg></button></article>
+   <article class="card"><img src="images/color.jpg" alt="Color prints"><div><h3>Color Printing</h3><p>Bring your ideas to life with vibrant, high-quality color prints.</p></div><button class="arrow" data-service="color" aria-label="Order Color Printing"><svg><use href="#arrow"/></svg></button></article>
+   <article class="card"><img src="images/binding.jpg" alt="Bound documents"><div><h3>Document Binding</h3><p>Keep your work neat, organized, and professional.</p></div><button class="arrow" data-service="binding" aria-label="Order Document Binding"><svg><use href="#arrow"/></svg></button></article>
+   <article class="card"><img src="images/poster.jpg" alt="Poster and rolled prints"><div><h3>Posters &amp; Projects</h3><p>Large format prints, posters, and custom projects for presentations and events.</p></div><button class="arrow" data-service="poster" aria-label="Order Posters and Projects"><svg><use href="#arrow"/></svg></button></article>
+  </div>
+  <div id="cta" class="cta">
+   <svg class="lines l" viewBox="0 0 40 50"><path d="M4 8l32 10M4 26h32M4 44l32-10" stroke="#0878F9" stroke-width="3" stroke-linecap="round"/></svg>
+   <img src="images/mascot.png" alt="CampusPrint dragon mascot">
+   <div class="cta-text"><h3>Ready to print your next project?</h3><p>Get started now and make your ideas happen!</p></div>
+   <button class="btn solid order-btn"><svg class="ic"><use href="#printer"/></svg>Start Your Order<svg class="ic sm"><use href="#arrow"/></svg></button>
+   <svg class="lines r" viewBox="0 0 40 50"><path d="M36 8 4 18M36 26H4M36 44 4 34" stroke="#0878F9" stroke-width="3" stroke-linecap="round" opacity=".6"/></svg>
+  </div>
+  <div class="promo"><video controls preload="metadata" playsinline aria-label="CampusPrint Express promotional video"><source src="videos/promo.mp4" type="video/mp4">Your browser does not support video playback.</video></div>
+ </section>
+ <section id="contact" class="contact">
+  <p class="label"><i></i>CONTACT US<i></i></p>
+  <div class="contact-grid">
+   <div><strong>Phone</strong><a href="tel:+639322446213">0932 244 6213</a></div>
+   <div><strong>Address</strong><span>Leon Kilat St., Cebu City</span></div>
+   <div><strong>Email</strong><a href="mailto:campusprintexpress@email.com">campusprintexpress@email.com</a></div>
+  </div>
+ </section>
+</main>
+
+<dialog id="order-dialog" aria-labelledby="dialog-title">
+ <div class="dh"><h2 id="dialog-title">Order Prints</h2><button id="close-dialog" class="x" aria-label="Close">✕</button></div>
+ <p class="note"><strong>Demo only:</strong> no backend is connected, so orders are not sent to a real business.</p>
+ <form id="order-form" novalidate>
+  <label for="service">Service</label>
+  <select id="service"><option value="bw">Black &amp; White Printing</option><option value="color">Color Printing</option><option value="binding">Document Binding</option><option value="poster">Posters &amp; Projects</option></select>
+  <label for="student-name">Student name</label><input id="student-name" type="text" autocomplete="name"><small class="err" id="err-name"></small>
+  <label for="contact">Contact information</label><input id="contact" type="text"><small class="err" id="err-contact"></small>
+  <label for="doc-name">Document name</label><input id="doc-name" type="text"><small class="err" id="err-doc"></small>
+  <div class="row"><div><label for="printing">Printing type</label><select id="printing"><option value="bw">Black &amp; White</option><option value="color">Color</option></select></div>
+  <div><label for="paper">Paper size</label><select id="paper"><option>A4</option><option>Letter</option><option>Legal</option></select></div></div>
+  <div class="row"><div><label for="pages">Number of pages</label><input id="pages" type="number" min="1" value="10"><small class="err" id="err-pages"></small></div>
+  <div><label for="copies">Number of copies</label><input id="copies" type="number" min="1" value="1"><small class="err" id="err-copies"></small></div></div>
+  <label for="binding">Binding option</label><select id="binding"><option value="none">None</option><option value="bound">With Binding</option></select>
+  <label for="notes">Additional instructions</label><textarea id="notes" rows="3"></textarea>
+  <div class="total" aria-live="polite">Estimated total: <strong id="total">₱0.00</strong></div>
+  <button type="submit" class="btn solid full">Place Demo Order</button>
+ </form>
+ <div id="summary" hidden aria-live="polite"><p class="ok" id="success-msg"></p><dl id="summary-list"></dl><p class="note">This is a demonstration order and was not sent anywhere.</p><button id="new-order" class="btn line full">Start Another Order</button></div>
+</dialog>
+<script type="py" src="./main.py"></script>
+</body>
+</html>
